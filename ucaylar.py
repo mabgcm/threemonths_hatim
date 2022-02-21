@@ -31,12 +31,12 @@ gun = int(ucaylar[8:10])  # number of days at the current date
 # print(h)
 
 
-gun_cuz = input("Okunan sayfa sayisini giriniz: ") # takes the current total number of pages already read
-print('Okunmasi gereken sayfa:', ((ay + gun) * 7)) # states the total number of pages that must be read until that date
+gun_cuz = input("Enter the number of pages you've already read: ") # takes the current total number of pages already read
+print("Number of pages that must be read today:", ((ay + gun) * 7)) # states the total number of pages that must be read until that date
 hatim = (((ay + gun) * daily_page) - int(gun_cuz)) # calculates the difference btw must-be-read and already-read
 hatim = int(hatim) #converts to difference to integer
 
 if hatim > 0:
-    print(hatim, 'sayfa geridesiniz.')
+    print("You' must read", hatim, "pages more to complete on time.")
 elif hatim < 0:
-    print(-(hatim), 'sayfa ileridesiniz.')
+    print("You've read", -(hatim), 'pages extra.")
